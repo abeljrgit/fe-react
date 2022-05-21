@@ -1,4 +1,115 @@
-body {
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap");
+
+$big-shoulders: "Big Shoulders Display", cursive;
+$lexend-deca: "Lexend Deca", sans-serif;
+$Bright-orange: hsl(31, 77%, 52%);
+$Dark-cyan: hsl(184, 100%, 22%);
+$Very-dark-cyan: hsl(179, 100%, 13%);
+$Transparent-white: hsla(0, 0%, 100%, 0.75);
+$Very-light-gray: hsl(0, 0%, 95%);
+
+body,
+main {
   width: 100%;
-  height: 100%;
+  min-height: 100vh;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 100rem;
+  @media screen and (max-width: 767px) {
+    min-width: 100%;
+  }
+}
+
+.card {
+  display: flex;
+  border-radius: 1rem;
+  overflow: hidden;
+  @media screen and (max-width: 767px) {
+    flex-direction: column;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 5rem;
+    @media screen and (max-width: 767px) {
+      padding: 4rem;
+    }
+
+    &--bright-orange {
+      background-color: $Bright-orange;
+
+      & .card__learn-more {
+        color: $Bright-orange;
+      }
+    }
+
+    &--dark-cyan {
+      background-color: $Dark-cyan;
+
+      & .card__learn-more {
+        color: $Dark-cyan;
+      }
+    }
+
+    &--very-dark-cyan {
+      background-color: $Very-dark-cyan;
+
+      & .card__learn-more {
+        color: $Very-dark-cyan;
+      }
+    }
+  }
+
+  &__logo {
+    margin-bottom: 3rem;
+    @media screen and (max-width: 767px) {
+      margin-bottom: 2rem;
+    }
+  }
+
+  &__title {
+    font-family: $big-shoulders;
+    font-size: 4rem;
+    color: $Very-light-gray;
+    margin-bottom: 3rem;
+    @media screen and (max-width: 767px) {
+      margin-bottom: 2rem;
+    }
+  }
+
+  &__details {
+    font-family: $lexend-deca;
+    font-size: 1.6rem;
+    line-height: 2;
+    color: $Transparent-white;
+    max-width: 25rem;
+    margin-bottom: 6rem;
+    @media screen and (max-width: 767px) {
+      margin-bottom: 3rem;
+    }
+  }
+
+  &__learn-more {
+    display: block;
+    font-family: $lexend-deca;
+    font-size: 1.6rem;
+    background-color: $Very-light-gray;
+    text-decoration: none;
+    padding: 1.2rem 2.4rem;
+    border: 0.2rem solid $Very-light-gray;
+    border-radius: 5rem;
+    transition: all 0.25s ease;
+
+    &:hover {
+      background-color: transparent;
+      color: $Very-light-gray;
+      transition: all 0.25s ease;
+    }
+  }
 }
