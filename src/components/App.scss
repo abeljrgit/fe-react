@@ -1,4 +1,132 @@
-body {
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap");
+
+$inter: "Inter", sans-serif;
+$lexend-deca: "Lexend Deca", sans-serif;
+
+$Very-dark-blue-main-bg: hsl(233, 47%, 7%);
+$Dark-desaturated-blue-card-bg: hsl(244, 38%, 16%);
+$Soft-violet-accent: hsl(277, 64%, 61%);
+$White: hsl(0, 0%, 100%);
+$Slightly-transparent-white-75: hsla(0, 0%, 100%, 0.75);
+$Slightly-transparent-white-60: hsla(0, 0%, 100%, 0.6);
+
+body,
+main {
   width: 100%;
-  height: 100%;
+  height: 100vh;
+}
+
+main {
+  background-color: $Very-dark-blue-main-bg;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  width: 72rem;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  @media screen and (max-width: 767px) {
+    width: 24rem;
+    flex-direction: column-reverse;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    background-color: $Dark-desaturated-blue-card-bg;
+    padding: 5rem 6rem 5rem 5rem;
+    @media screen and (max-width: 767px) {
+      width: 100%;
+      padding: 3rem 2rem 2.5rem 2rem;
+    }
+  }
+
+  &__lead {
+    font-family: $inter;
+    color: $White;
+    margin-bottom: 2rem;
+    @media screen and (max-width: 767px) {
+      text-align: center;
+    }
+
+    & > span {
+      color: $Soft-violet-accent;
+    }
+  }
+
+  &__details {
+    font-family: $inter;
+    font-size: 1rem;
+    line-height: 2;
+    color: $Slightly-transparent-white-75;
+    @media screen and (max-width: 767px) {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+  }
+
+  &__stats {
+    display: flex;
+    justify-content: space-between;
+    margin-top: auto;
+    @media screen and (max-width: 767px) {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__stats-item {
+    display: flex;
+    flex-direction: column;
+    @media screen and (max-width: 767px) {
+      align-items: center;
+
+      &:not(:last-of-type) {
+        margin-bottom: 2rem;
+      }
+    }
+
+    & > span:nth-of-type(1) {
+      font-family: $inter;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: $White;
+      margin-bottom: 0.5rem;
+    }
+
+    & > span:nth-of-type(2) {
+      font-family: $lexend-deca;
+      font-size: 1.2rem;
+      font-weight: 400;
+      color: $Slightly-transparent-white-60;
+    }
+  }
+
+  &__thumbnail {
+    width: 50%;
+    position: relative;
+    @media screen and (max-width: 767px) {
+      width: 100%;
+    }
+
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba($Soft-violet-accent, 0.5);
+    }
+
+    & > img {
+      display: block;
+      width: 100%;
+    }
+  }
 }
