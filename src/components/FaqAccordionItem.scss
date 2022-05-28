@@ -1,0 +1,67 @@
+.accordion {
+  &__item {
+    width: 100%;
+    border-bottom: 0.1rem solid rgba($Dark-grayish-blue, 0.5);
+
+    &--opened {
+      & .accordion__child {
+        padding: 0 0 12px 0;
+        max-height: 500px;
+        transition: all 0.5s ease;
+      }
+
+      & .accordion__parent-text {
+        font-weight: 700;
+        color: $Very-dark-desaturated-blue;
+        transition: all 0.5s ease;
+      }
+
+      & .accordion__parent-icon > img {
+        transform: rotate(0);
+        transition: all 0.5s ease;
+      }
+    }
+  }
+
+  &__parent {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 0;
+    cursor: pointer;
+
+    &:hover {
+      & .accordion__parent-text {
+        color: $Soft-red;
+      }
+    }
+  }
+
+  &__parent-text {
+    font-size: 1.6rem;
+    transition: all 0.25s ease;
+  }
+
+  &__parent-icon {
+    margin-left: 10px;
+    margin-right: 1rem;
+
+    & > img {
+      display: block;
+      transform-origin: center;
+      transform: rotate(180deg);
+      transition: all 0.5s ease;
+    }
+  }
+
+  &__child {
+    overflow: hidden;
+    max-height: 0;
+    transition: all 0.25s ease;
+  }
+
+  &__child-text {
+    font-size: 1.4rem;
+    color: $Dark-grayish-blue;
+  }
+}
