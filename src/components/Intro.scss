@@ -1,0 +1,32 @@
+.intro {
+  @media screen and (max-width: 767px) {
+    text-align: center;
+    width: 100%;
+    padding-top: 4rem;
+  }
+
+  &__title {
+    font: 700 4rem $ls;
+    color: $Very-Dark-Magenta;
+    max-width: 32rem;
+    width: 100%;
+    @media screen and (max-width: 767px) {
+      text-align: center;
+      width: 100%;
+      margin: 0 auto;
+    }
+  }
+
+  &__lead {
+    font: 500 1.6rem/1.5 $ls;
+    color: $Dark-Grayish-Magenta;
+    max-width: 37.5rem;
+    width: 100%;
+    margin-top: 2rem;
+    @media screen and (max-width: 767px) {
+      text-align: center;
+      width: 100%;
+      margin: 2rem auto;
+    }
+  }
+}

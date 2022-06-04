@@ -1,4 +1,56 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;700&display=swap");
+
+$Very-Dark-Magenta: hsl(300, 43%, 22%);
+$Soft-Pink: hsl(333, 80%, 67%);
+$Dark-Grayish-Magenta: hsl(303, 10%, 53%);
+$Light-Grayish-Magenta: hsl(300, 24%, 96%);
+$White: hsl(0, 0%, 100%);
+
+$ls: "League Spartan", sans-serif;
+
+@import "./Intro.scss";
+@import "./RatingsItem.scss";
+@import "./Ratings.scss";
+@import "./TestimonialsItem.scss";
+@import "./Testimonials.scss";
+
 body {
   width: 100%;
+  font-family: "League Spartan", sans-serif;
+}
+
+main {
+  min-width: 950px;
   height: 100%;
+  display: flex;
+  align-items: center;
+  @media screen and (max-width: 767px) {
+    min-width: 100%;
+  }
+}
+
+.social-proof {
+  max-width: 120rem;
+  width: 100%;
+  margin: 5rem auto 0 auto;
+  padding: 8rem 10rem;
+  background: url("../img/bg-pattern-top-desktop.svg") no-repeat,
+    url("../img/bg-pattern-bottom-desktop.svg") no-repeat;
+  background-position: left 0% top 0%, right 0% bottom 0%;
+  border-radius: 1rem;
+  box-shadow: 2px 5px 10px 1px rgba(0, 0, 0, 0.3);
+  @media screen and (max-width: 767px) {
+    padding: 2rem 1rem;
+    margin: 0;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    @media screen and (max-width: 767px) {
+      flex-direction: column;
+    }
+  }
 }

@@ -1,0 +1,70 @@
+.testimonial-item {
+  background-color: $Very-Dark-Magenta;
+  max-width: 31rem;
+  border-radius: 1rem;
+  padding: 3rem 2.5rem 3rem 2.5rem;
+  @media screen and (max-width: 1200px) {
+    max-width: 29rem;
+  }
+  @media screen and (max-width: 1100px) {
+    max-width: 26rem;
+    min-height: 25rem;
+  }
+  @media screen and (max-width: 1000px) {
+    max-width: 24rem;
+  }
+
+  &__profile {
+    display: flex;
+    align-items: center;
+  }
+
+  &__profile-left {
+  }
+
+  &__image {
+    max-width: 4rem;
+    border-radius: 5rem;
+    overflow: hidden;
+
+    & > img {
+      display: block;
+      object-fit: contain;
+      max-width: 100%;
+      max-height: 100%;
+    }
+  }
+
+  &__profile-right {
+    display: flex;
+    flex-direction: column;
+    margin-left: 2rem;
+  }
+
+  &__name {
+    font: 500 1.6rem $ls;
+    color: $White;
+    margin-bottom: 0.25rem;
+  }
+
+  &__verification {
+    font: 400 1.4rem $ls;
+    letter-spacing: 0.1em;
+    color: $Soft-Pink;
+  }
+
+  &__quote {
+    font: 400 1.5rem $ls;
+    color: $White;
+    line-height: 1.5;
+    margin-top: 2rem;
+
+    &::before {
+      content: "\201C";
+    }
+
+    &::after {
+      content: "\201D";
+    }
+  }
+}
