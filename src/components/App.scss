@@ -1,4 +1,262 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap");
+
+$Very-Dark-Grayish-Blue: hsl(217, 19%, 35%);
+$Desaturated-Dark-Blue: hsl(214, 17%, 51%);
+$Grayish-Blue: hsl(212, 23%, 69%);
+$Light-Grayish-Blue: hsl(210, 46%, 95%);
+
+$manrope: "Manrope", sans-serif;
+
 body {
   width: 100%;
+  min-height: 100vh;
+  background-color: $Light-Grayish-Blue;
+}
+
+main {
+  min-width: 85rem;
   height: 100%;
+  @media screen and (max-width: 767px) {
+    min-width: 100%;
+  }
+}
+
+.App {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  position: relative;
+
+  &__wrapper {
+    font-family: $manrope;
+    display: flex;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+    @media screen and (max-width: 767px) {
+      flex-direction: column;
+    }
+  }
+
+  &__thumbnail {
+    overflow: hidden;
+    position: relative;
+    min-width: 27rem;
+    @media screen and (max-width: 767px) {
+      min-width: auto;
+      min-height: 20rem;
+    }
+
+    & > img {
+      display: block;
+      width: 130%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-40%, -50%);
+      @media screen and (max-width: 767px) {
+        width: 100%;
+        transform: translate(-50%, -50%);
+      }
+    }
+  }
+
+  &__content {
+    max-width: 39rem;
+    padding: 3rem;
+    background-color: white;
+    @media screen and (max-width: 767px) {
+      max-width: 30rem;
+      padding: 3rem 3rem 1.25rem 3rem;
+    }
+  }
+
+  &__content-title {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: $Very-Dark-Grayish-Blue;
+  }
+
+  &__content-paragraph {
+    font-size: 1.2rem;
+    font-weight: 500;
+    line-height: 1.75;
+    color: $Desaturated-Dark-Blue;
+    margin-top: 2rem;
+    @media screen and (max-width: 767px) {
+      margin-top: 1.5rem;
+    }
+  }
+
+  &__last-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 2rem;
+    @media screen and (max-width: 767px) {
+      margin-top: 3rem;
+    }
+  }
+
+  &__profile {
+    display: flex;
+    align-items: center;
+  }
+
+  &__profile-name {
+    color: $Very-Dark-Grayish-Blue;
+    font-size: 1.2rem;
+    font-weight: 700;
+  }
+
+  &__profile-date {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: $Grayish-Blue;
+    margin-top: 0.25rem;
+    @media screen and (max-width: 767px) {
+      margin-top: 0;
+    }
+  }
+
+  &__profile-image {
+    width: 4rem;
+    border-radius: 4rem;
+    overflow: hidden;
+    @media screen and (max-width: 767px) {
+      width: 3.5rem;
+    }
+
+    & > img {
+      display: block;
+      max-width: 100%;
+      max-height: 100%;
+    }
+  }
+
+  &__profile-info {
+    display: flex;
+    flex-direction: column;
+    margin-left: 1.5rem;
+  }
+
+  &__share-btn {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 2rem;
+    background-color: $Light-Grayish-Blue;
+    cursor: pointer;
+    margin-bottom: 0.2rem;
+    transition: all 0.25s ease;
+    // This makes higher than .card__social
+    z-index: 11;
+  }
+
+  &__share-btn--active {
+    background-color: $Very-Dark-Grayish-Blue;
+    transition: all 0.25s ease;
+    @media screen and (max-width: 767px) {
+      background-color: $Desaturated-Dark-Blue;
+    }
+
+    & .card__share-btn-wrapper {
+      background-color: white;
+      transition: all 0.25s ease;
+    }
+  }
+
+  &__share-btn-wrapper {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 3rem;
+    background-color: $Very-Dark-Grayish-Blue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    -webkit-mask-image: url("../img/icon-share.svg");
+    mask-image: url("../img/icon-share.svg");
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-position: center 45%;
+    mask-position: center 45%;
+    transition: all 0.25s ease;
+  }
+
+  &__social {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    bottom: 9rem;
+    right: -7.7rem;
+    // This makes lower than .card__share-btn
+    z-index: 10;
+    transition: all 1s ease;
+    animation-name: displayNone;
+    @media screen and (max-width: 767px) {
+      bottom: 0;
+      right: 0;
+      left: 0;
+    }
+  }
+
+  &__social--active {
+    visibility: visible;
+    opacity: 1;
+    transition: all 1s ease;
+  }
+
+  &__social-wrapper {
+    background-color: $Very-Dark-Grayish-Blue;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    display: flex;
+    align-items: center;
+    padding: 1.5rem 3rem 1.5rem 3rem;
+    border-radius: 1rem;
+    position: relative;
+    @media screen and (max-width: 767px) {
+      height: 6rem;
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+    }
+
+    &:before {
+      content: "";
+      width: 0;
+      height: 0;
+      border-left: 1.5rem solid transparent;
+      border-right: 1.5rem solid transparent;
+      border-top: 1.5rem solid $Very-Dark-Grayish-Blue;
+      position: absolute;
+      bottom: -1rem;
+      left: 50%;
+      transform: translateX(-50%);
+      @media screen and (max-width: 767px) {
+        display: none;
+      }
+    }
+
+    & a {
+      text-decoration: none;
+
+      & > img {
+        display: block;
+      }
+
+      &:not(:last-of-type) {
+        margin-right: 1.6rem;
+      }
+    }
+  }
+
+  &__social-content-text {
+    font-size: 1.2rem;
+    color: $Grayish-Blue;
+
+    letter-spacing: 0.4em;
+    margin-right: 1.5rem;
+  }
 }
