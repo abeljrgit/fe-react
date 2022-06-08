@@ -1,0 +1,47 @@
+.fc {
+  background-color: white;
+  width: 30rem;
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px,
+    rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+
+  &--cyan {
+    border-top: 0.4rem solid $Cyan;
+  }
+
+  &--red {
+    border-top: 0.4rem solid $Red;
+  }
+
+  &--orange {
+    border-top: 0.4rem solid $Orange;
+  }
+
+  &--blue {
+    border-top: 0.4rem solid $Blue;
+  }
+
+  &__title {
+    font-size: 1.6rem;
+    color: $Very-Dark-Blue;
+  }
+
+  &__description {
+    font-size: 1.4rem;
+    color: $Grayish-Blue;
+    line-height: 2;
+    margin-top: 0.5rem;
+  }
+
+  &__icon {
+    margin-top: 2rem;
+    align-self: flex-end;
+
+    & > img {
+      display: block;
+    }
+  }
+}
