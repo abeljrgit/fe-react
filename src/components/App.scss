@@ -1,4 +1,226 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap");
+
+$Desaturated-Red: hsl(0, 36%, 70%);
+$Soft-Red: hsl(0, 93%, 68%);
+$Dark-Grayish-Red: hsl(0, 6%, 24%);
+$Linear1: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+$Linear2: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+
+$josefin-sans: "Josefin Sans", sans-serif;
+
 body {
   width: 100%;
   height: 100%;
+  font-family: $josefin-sans;
+}
+
+main {
+  min-width: 98rem;
+  @media screen and (max-width: 767px) {
+    min-width: 100%;
+  }
+}
+
+.App {
+  padding-top: 6rem;
+  @media screen and (max-width: 767px) {
+    padding-top: 0;
+  }
+}
+
+.cs {
+  display: flex;
+  max-width: 120rem;
+  width: 100%;
+  margin: 0 auto;
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+  @media screen and (max-width: 767px) {
+    flex-direction: column-reverse;
+  }
+
+  &__content {
+    padding: 10rem 0 10rem 10rem;
+    width: 55%;
+    background: url("../img/bg-pattern-desktop.svg") no-repeat, $Linear1;
+    background-size: 100% 100%;
+    @media screen and (max-width: 1100px) {
+      padding: 7rem 0 7rem 7rem;
+    }
+    @media screen and (max-width: 767px) {
+      padding: 3rem 3rem 8rem 3rem;
+      width: 100%;
+    }
+  }
+
+  &__logo {
+    width: 12rem;
+    @media screen and (max-width: 767px) {
+      display: none;
+    }
+
+    & > img {
+      width: 100%;
+    }
+  }
+
+  &__logo-sp {
+    display: none;
+    @media screen and (max-width: 767px) {
+      display: block;
+      width: 100%;
+      order: 3;
+      padding: 2rem;
+
+      & > img {
+        width: 10rem;
+      }
+    }
+  }
+
+  &__title {
+    font-size: 5.4rem;
+    font-weight: 300;
+    letter-spacing: 0.2em;
+    line-height: 1.2;
+    color: $Desaturated-Red;
+    margin-top: 8rem;
+    @media screen and (max-width: 1200px) {
+      margin-top: 6rem;
+      line-height: 1;
+    }
+    @media screen and (max-width: 767px) {
+      font-size: 4rem;
+      margin-top: 0;
+      text-align: center;
+    }
+
+    & span {
+      font-weight: 600;
+      color: $Dark-Grayish-Red;
+    }
+  }
+
+  &__paragraph {
+    font-size: 1.6rem;
+    line-height: 1.5;
+    color: $Desaturated-Red;
+    max-width: 40rem;
+    margin-top: 3rem;
+    @media screen and (max-width: 767px) {
+      text-align: center;
+      margin: 3rem auto 0 auto;
+    }
+  }
+
+  &__wrapper {
+    margin-top: 4rem;
+    max-width: 40rem;
+    display: flex;
+    align-items: center;
+    position: relative;
+    @media screen and (max-width: 767px) {
+      margin: 4rem auto 0 auto;
+    }
+  }
+
+  &__email-input {
+    font-family: inherit;
+    padding-left: 1.5rem;
+    width: 100%;
+    height: 4.5rem;
+    border: 0.1rem solid rgba($Dark-Grayish-Red, 0.25);
+    border-radius: 5rem;
+    background-color: transparent;
+
+    &::placeholder {
+      font-weight: 600;
+      color: $Desaturated-Red;
+      color: rgba($Dark-Grayish-Red, 0.25);
+    }
+
+    &:focus {
+      outline: none;
+      border: 0.1rem solid rgba($Dark-Grayish-Red, 0.5);
+    }
+
+    &:invalid {
+      border: 0.1rem solid $Soft-Red;
+
+      & + .cs__email-error {
+        display: block;
+      }
+
+      & ~ .cs__email-error-text {
+        display: block;
+      }
+    }
+  }
+
+  &__email-error {
+    display: none;
+    width: 2.4rem;
+    height: 2.4rem;
+    position: absolute;
+    top: 50%;
+    right: 9rem;
+    transform: translateY(-50%);
+  }
+
+  &__email-error-text {
+    display: none;
+    font-weight: 600;
+    position: absolute;
+    bottom: -1.75rem;
+    left: 1.5rem;
+    color: $Soft-Red;
+  }
+
+  &__email-submit-btn {
+    height: 4.5rem;
+    width: 8rem;
+    background: $Linear2;
+    border: none;
+    border-radius: 5rem;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    box-shadow: 3.25px 11px 11px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+    transition: all 0.25s ease;
+
+    &:active {
+      box-shadow: 0 0 0 rgba(0, 0, 0, 0.25);
+      transition: all 0.25s ease;
+    }
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  &__thumbnail {
+    width: 45%;
+    @media screen and (max-width: 767px) {
+      display: none;
+    }
+
+    & > img {
+      display: block;
+      width: 100%;
+    }
+  }
+
+  &__thumbnail-sp {
+    display: none;
+    @media screen and (max-width: 767px) {
+      width: 100%;
+      display: block;
+    }
+
+    & > img {
+      display: block;
+      width: 100%;
+    }
+  }
 }
