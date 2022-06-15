@@ -1,0 +1,131 @@
+.form {
+  max-width: 45rem;
+  width: 100%;
+}
+
+.form-promo {
+  background-color: $Blue;
+  font: 400 1.6rem/1.5 $poppins;
+  color: $white;
+  text-align: center;
+  box-shadow: 1px 6px 9px 1px rgba($Blue, 0.3);
+  padding: 1.5rem 0;
+  border-radius: 0.5rem;
+  margin-bottom: 2rem;
+
+  & > br {
+    display: none;
+    @media screen and (max-width: 768px) {
+      display: block;
+    }
+  }
+  & > span {
+    font-weight: 700;
+  }
+}
+
+.form-main {
+  display: flex;
+  flex-direction: column;
+  background-color: $white;
+  padding: 3rem 3rem 4rem 3rem;
+  border-radius: 0.5rem;
+
+  &__input-wrapper {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+    &:after {
+      visibility: hidden;
+      content: "";
+      width: 2rem;
+      height: 2rem;
+      background: url("../img/icon-error.svg") no-repeat;
+      background-size: contain;
+      position: absolute;
+      top: 1.4rem;
+      right: 2rem;
+    }
+
+    & > input {
+      padding: 1rem 1.5rem;
+      font: 700 1.6rem/1 $poppins;
+      color: $Dark-Blue;
+      border: 0.1rem solid $Grayish-Blue;
+      border-radius: 0.5rem;
+
+      &::placeholder {
+        font-weight: 500;
+      }
+
+      &:focus {
+        outline: 0.1rem solid $Blue;
+
+        &::placeholder {
+          color: transparent;
+        }
+      }
+    }
+
+    & > span {
+      visibility: hidden;
+      align-self: flex-end;
+      font-style: italic;
+      color: $Red;
+      padding-top: 0.5rem;
+      padding-bottom: 1rem;
+    }
+
+    &--error {
+      &:after {
+        visibility: visible;
+      }
+
+      & > input {
+        color: $Red;
+        border: 0.1rem solid $Red;
+      }
+
+      & > span {
+        visibility: visible;
+      }
+    }
+  }
+
+  &__button {
+    box-sizing: border-box;
+    cursor: pointer;
+    font: 700 1.6rem/1 $poppins;
+    color: $white;
+    background-color: $Green;
+    border: none;
+    box-shadow: 1px 6px 9px 1px rgba($Green-d, 0.3);
+    border-radius: 0.5rem;
+    padding: 1.5rem 2rem;
+    transition: all 0.25s ease;
+    margin-bottom: 2rem;
+
+    &:hover {
+      background-color: rgba($Green, 0.8);
+      transition: all 0.25s ease;
+    }
+
+    &:active {
+      background-color: rgba($Green, 0.5);
+      box-shadow: 0px 0px 0px 0px rgba($Green-d, 0.75);
+      transition: all 0.25s ease;
+    }
+  }
+
+  &__terms {
+    color: $Grayish-Blue;
+    align-self: center;
+
+    & > a {
+      color: $Red;
+      font-weight: 700;
+      text-decoration: none;
+    }
+  }
+}

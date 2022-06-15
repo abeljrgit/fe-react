@@ -1,0 +1,37 @@
+.intro {
+  max-width: 55rem;
+  @media screen and (max-width: 1200px) {
+    max-width: 45rem;
+  }
+  @media screen and (max-width: 1000px) {
+    max-width: 35rem;
+  }
+  @media screen and (max-width: 900px) {
+    max-width: 30rem;
+    margin-right: 5rem;
+  }
+  @media screen and (max-width: 768px) {
+    margin-bottom: 5rem;
+    max-width: 100%;
+  }
+
+  &__title {
+    font-size: 4rem;
+    line-height: 1.2;
+    color: $white;
+    letter-spacing: 0.02em;
+    margin-bottom: 2rem;
+    @media screen and (max-width: 768px) {
+      text-align: center;
+    }
+  }
+
+  &__paragraph {
+    font-size: 1.6rem;
+    color: $white;
+    letter-spacing: 0.02em;
+    @media screen and (max-width: 768px) {
+      text-align: center;
+    }
+  }
+}
