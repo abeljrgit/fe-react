@@ -23,6 +23,7 @@ body {
 
 .App {
   background: url("../img/bg-intro-desktop.png") no-repeat, $Red;
+  min-height: 100vh;
 
   &__container {
     max-width: 120rem;
