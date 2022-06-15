@@ -57,7 +57,7 @@ function Form() {
         then
         <br /> $20/mo. thereafter
       </div>
-      <form action="" className="form-main">
+      <form action="#" className="form-main">
         <div
           className={`form-main__input-wrapper ${
             isFnameEmpty ? "form-main__input-wrapper--error" : ""
