@@ -98,7 +98,9 @@ function Form() {
             name="email"
             placeholder="Email Address"
             ref={emailInput}
-            onChange={checkEmailEmpty}
+            onChange={() => {
+              checkEmailEmpty(), checkEmailValidity();
+            }}
           />
           {isEmailEmpty ? (
             <span>Email cannot be empty</span>
