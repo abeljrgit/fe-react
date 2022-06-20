@@ -4,9 +4,9 @@ function SinglePriceCard() {
       <div className="card__row">
         <div className="card__join">
           <h1 className="card__join-title">Join our community</h1>
-          <h3 className="card__join-lead">
+          <h2 className="card__join-lead">
             30-day, hassle-free money back guarantee
-          </h3>
+          </h2>
           <div className="card__join-sentences">
             <span>
               Gain access to our full library of tutorials along with expert
@@ -22,7 +22,7 @@ function SinglePriceCard() {
       </div>
       <div className="card__row">
         <div className="card__rate">
-          <h3 className="card__rate-lead">Monthly Subscription</h3>
+          <h2 className="card__rate-lead">Monthly Subscription</h2>
           <div className="card__rate-amount">
             <span>$29</span> permonth
           </div>
@@ -34,7 +34,7 @@ function SinglePriceCard() {
           </a>
         </div>
         <div className="card__reason">
-          <h3 className="card__reason-lead">Why Us</h3>
+          <h2 className="card__reason-lead">Why Us</h2>
           <div className="card__reason-sentences">
             <span>Tutorials by industry experts</span>
             <span>Peer &amp; expert code review</span>
