@@ -1,0 +1,132 @@
+.card {
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset,
+    rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+
+  &__row {
+    display: flex;
+    @media screen and (max-width: 768px) {
+      flex-direction: column;
+    }
+  }
+
+  &__join {
+    background-color: $White;
+    padding: 3.2rem 8rem 3.2rem 3.2rem;
+    @media screen and (max-width: 768px) {
+      padding: 2.4rem;
+    }
+  }
+
+  &__join-title {
+    font-size: 2.2rem;
+    color: $Cyan;
+    margin-bottom: 1.4rem;
+  }
+
+  &__join-lead {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: $Bright-Yellow;
+    margin-bottom: 1rem;
+  }
+
+  &__join-sentences {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.2rem;
+    font-weight: 700;
+    line-height: 1.75;
+    color: $Grayish-Blue;
+  }
+
+  &__rate {
+    flex-grow: 1;
+    background-color: $Cyan;
+    padding: 3.2rem;
+    display: flex;
+    flex-direction: column;
+    @media screen and (max-width: 768px) {
+      padding: 2.4rem;
+    }
+  }
+
+  &__rate-lead {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: $White;
+    margin-bottom: 1.4rem;
+  }
+
+  &__rate-amount {
+    font-size: 1.6rem;
+    color: $Light-Gray;
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+
+    & > span {
+      font-size: 2.4rem;
+      color: $White;
+      margin-right: 1rem;
+    }
+  }
+
+  &__rate-sentences {
+    font-size: 1.2rem;
+    line-height: 1.75;
+    color: $Light-Gray;
+    margin-bottom: 3rem;
+  }
+
+  &__rate-signup {
+    background-color: $Bright-Yellow;
+    font-size: 2rem;
+    font-weight: 700;
+    text-decoration: none;
+    text-align: center;
+    color: $White;
+    border-radius: 0.5rem;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+      rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    padding: 1.2rem 0;
+    margin-top: auto;
+    transition: all 0.25s ease;
+
+    &:hover {
+      background-color: $Bright-Yellow-Light;
+      transition: all 0.25s ease;
+    }
+
+    &:active {
+      box-shadow: rgba(50, 50, 93, 0.25) 0 0 0 0, rgba(0, 0, 0, 0.3) 0 0 0 0;
+      transition: all 0.25s ease;
+    }
+  }
+
+  &__reason {
+    flex-grow: 1;
+    background-color: $Cyan-Light;
+    padding: 3.2rem;
+    @media screen and (max-width: 768px) {
+      padding: 2.4rem;
+    }
+  }
+
+  &__reason-lead {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: $White;
+    margin-bottom: 1.4rem;
+  }
+
+  &__reason-sentences {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.2rem;
+    line-height: 1.75;
+    color: $Light-Gray;
+  }
+}

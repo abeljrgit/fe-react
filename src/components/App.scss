@@ -1,4 +1,37 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap");
+
+$Cyan: hsl(179, 62%, 43%);
+$Cyan-Light: hsl(179, 62%, 49%);
+$Bright-Yellow: hsl(71, 73%, 54%);
+$Bright-Yellow-Light: hsl(71, 80%, 56%);
+$Light-Gray: hsl(204, 43%, 93%);
+$Grayish-Blue: hsl(218, 22%, 67%);
+$White: #fff;
+
+$karla: "Karla", sans-serif;
+
 body {
   width: 100%;
   height: 100%;
+  font-family: $karla;
+  background-color: $Light-Gray;
 }
+
+.App {
+  &__container {
+    max-width: 120rem;
+    margin: 0 auto;
+  }
+
+  &__wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 10rem 0;
+    @media screen and (max-width: 768px) {
+      padding: 5rem 0;
+    }
+  }
+}
+
+@import "./SinglePriceCard.scss";
