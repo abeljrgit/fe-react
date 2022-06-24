@@ -1,4 +1,5 @@
 .hero {
+  min-height: 100vh;
   background: url("../img/bg-desktop.svg") no-repeat, $Violet;
   background-size: cover;
   @media screen and (max-width: 768px) {
