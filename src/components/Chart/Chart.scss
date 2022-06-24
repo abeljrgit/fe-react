@@ -1,0 +1,94 @@
+.exp {
+  max-width: 30rem;
+  width: 100%;
+
+  &__balance {
+    background-color: $Soft-red;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.6rem 2rem;
+    border-radius: 1.4rem;
+    margin-bottom: 2rem;
+  }
+
+  &__balance-text {
+    display: flex;
+    flex-direction: column;
+    color: $White;
+
+    & > span:nth-of-type(1) {
+      font-size: 1.4rem;
+      line-height: 1.5;
+    }
+    & > span:nth-of-type(2) {
+      font-size: 2rem;
+      font-weight: 700;
+    }
+  }
+
+  &__balance-logo {
+    width: 4rem;
+
+    & > img {
+      display: block;
+      width: 100%;
+    }
+  }
+  &__chart-title {
+    font-size: 2rem;
+    font-weight: 700;
+  }
+
+  &__chart {
+    background-color: $Very-pale-orange;
+    padding: 1.6rem;
+    border-radius: 1.4rem;
+    color: $Dark-brown;
+  }
+
+  &__chart-diagram {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    min-height: 15rem;
+    margin-bottom: 2rem;
+    padding-top: 3rem;
+  }
+
+  &__total {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding: 1.6rem 0 1rem 0;
+    border-top: 0.1rem solid $Cream;
+  }
+
+  &__total-left {
+    & > h2 {
+      font-size: 1.4rem;
+      font-weight: 400;
+      color: $Medium-brown;
+      margin-bottom: 0.8rem;
+    }
+
+    & > span {
+      font-size: 2.4rem;
+      font-weight: 700;
+      line-height: 0.8;
+    }
+  }
+
+  &__total-right {
+    & > h3 {
+      font-size: 1.4rem;
+      font-weight: 400;
+      color: $Medium-brown;
+    }
+
+    & > span {
+      font-size: 1.4rem;
+      font-weight: 700;
+    }
+  }
+}

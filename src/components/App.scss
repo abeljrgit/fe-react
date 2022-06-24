@@ -1,4 +1,39 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap");
+
+$dm-sans: "DM Sans", sans-serif;
+
+$Soft-red: hsl(10, 79%, 65%);
+$Cyan: hsl(186, 34%, 60%);
+$Dark-brown: hsl(25, 47%, 15%);
+$Medium-brown: hsl(28, 10%, 53%);
+$Cream: hsl(27, 66%, 92%);
+$Very-pale-orange: hsl(33, 100%, 98%);
+$White: #fff;
+
+// Chart Card Styles
+@import "./Chart/ChartColumn.scss";
+@import "./Chart/Chart.scss";
+
 body {
   width: 100%;
-  height: 100%;
+  background-color: $Cream;
+  font-family: $dm-sans;
+}
+
+main {
+  min-height: 100vh;
+}
+
+.App {
+  &__container {
+    max-width: 120rem;
+    margin: 0 auto;
+  }
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10rem 0;
+  }
 }
