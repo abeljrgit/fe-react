@@ -1,7 +1,8 @@
 import "./App.scss";
+import Hero from "./Hero";
 
 function App() {
-  return <section className="App">{/* Insert Your Code Here */}</section>;
+  return <Hero />;
 }
 
 export default App;
