@@ -1,0 +1,19 @@
+.sm {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: -30rem;
+  width: 22rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background-color: $White;
+  padding: 7.2rem 2rem 2rem;
+  z-index: 9;
+  transition: all 0.25s ease;
+
+  &--visible {
+    right: 0;
+    transition: all 0.25s ease;
+  }
+}

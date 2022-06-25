@@ -1,0 +1,41 @@
+.header {
+  display: flex;
+  align-items: center;
+  padding: 4rem;
+
+  @media screen and (max-width: 768px) {
+    padding: 2rem;
+  }
+
+  &__logo {
+    display: flex;
+    align-items: center;
+    padding-top: 0.5rem;
+    margin-right: 8rem;
+    @media screen and (max-width: 1000px) {
+      margin-right: 4rem;
+    }
+  }
+
+  &__links {
+    display: flex;
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
+  }
+
+  &__account {
+    margin-left: auto;
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
+  }
+
+  &__burger-container {
+    margin-left: auto;
+    display: none;
+    @media screen and (max-width: 768px) {
+      display: block;
+    }
+  }
+}

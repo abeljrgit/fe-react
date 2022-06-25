@@ -1,0 +1,37 @@
+.linkSingle {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: $Medium-Gray;
+  text-decoration: none;
+  transition: all 0.25s ease;
+  @media screen and (max-width: 1000px) {
+    font-size: 1.4rem;
+  }
+
+  &:not(:last-of-type) {
+    margin-right: 4rem;
+    @media screen and (max-width: 1000px) {
+      margin-right: 2rem;
+    }
+  }
+
+  &:hover {
+    color: $Almost-Black;
+    transition: all 0.25s ease;
+  }
+
+  &--bordered {
+    border: 0.2rem solid $Medium-Gray;
+    border-radius: 1rem;
+    padding: 1.6rem 3rem 1.4rem 3rem;
+    transition: all 0.25s ease;
+    @media screen and (max-width: 1000px) {
+      padding: 1.2rem 1.5rem 1rem 1.5rem;
+    }
+
+    &:hover {
+      border: 0.2rem solid $Almost-Black;
+      transition: all 0.25s ease;
+    }
+  }
+}
