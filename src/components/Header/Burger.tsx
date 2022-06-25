@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 function Burger(props: any) {
   const [isBurgerActive, setIsBurgerActive] = useState(false);
@@ -7,6 +7,22 @@ function Burger(props: any) {
     setIsBurgerActive(!isBurgerActive);
     props.onToggleBurger();
   };
+
+  useEffect(() => {
+    if (isBurgerActive) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+  }, [isBurgerActive]);
+
+  window
+    .matchMedia("(max-width: 768px)")
+    .addEventListener("change", function (e: any) {
+      if (e.matches === false) {
+        setIsBurgerActive(false);
+      }
+    });
 
   return (
     <div

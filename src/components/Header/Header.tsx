@@ -60,6 +60,14 @@ function Header() {
     setIsSideMenuOpen(!isSideMenuOpen);
   };
 
+  window
+    .matchMedia("(max-width: 768px)")
+    .addEventListener("change", function (e: any) {
+      if (e.matches === false) {
+        setIsSideMenuOpen(false);
+      }
+    });
+
   return (
     <header className="header">
       <div className="header__logo">
