@@ -1,4 +1,35 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap");
+
+$manrope: "Manrope", sans-serif;
+
+$Light-Cyan: hsl(193, 38%, 86%);
+$Neon-Green: hsl(150, 100%, 66%);
+$Grayish-Blue: hsl(217, 19%, 38%);
+$Dark-Grayish-Blue: hsl(217, 19%, 24%);
+$Dark-Blue: hsl(218, 23%, 16%);
+
+@import "./AdviceCard.scss";
+
 body {
   width: 100%;
   height: 100%;
+  background-color: $Dark-Blue;
+  font-family: $manrope;
+}
+
+.App {
+  &__container {
+    max-width: 120rem;
+    margin: 0 auto;
+  }
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10rem;
+    @media screen and (max-width: 768px) {
+      padding: 10rem 2rem;
+    }
+  }
 }
