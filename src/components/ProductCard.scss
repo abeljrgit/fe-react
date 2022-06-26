@@ -1,0 +1,122 @@
+.pCard {
+  display: flex;
+  border-radius: 2.5rem;
+  overflow: hidden;
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+  }
+
+  &__left {
+    width: 33rem;
+
+    & > img:nth-of-type(1) {
+      display: block;
+      @media screen and (max-width: 768px) {
+        display: none;
+      }
+    }
+
+    & > img:nth-of-type(2) {
+      display: none;
+      @media screen and (max-width: 768px) {
+        display: block;
+      }
+    }
+
+    & > img {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+  }
+
+  &__right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 4rem;
+    background-color: $White;
+    @media screen and (max-width: 768px) {
+      padding: 2rem;
+    }
+  }
+
+  &__type {
+    font: 500 1.6rem/1 $montserrat;
+    letter-spacing: 0.2em;
+    color: $Dark-grayish-blue;
+    margin-bottom: 2.5rem;
+    @media screen and (max-width: 768px) {
+      margin-bottom: 1rem;
+    }
+  }
+
+  &__title {
+    font: 700 3.2rem/1 $frauncess;
+    max-width: 25rem;
+    margin-bottom: 3rem;
+    @media screen and (max-width: 768px) {
+      font-size: 2.4rem;
+      margin-bottom: 1.5rem;
+    }
+  }
+
+  &__paragraph {
+    font: 500 1.6rem/1.5 $montserrat;
+    color: $Dark-grayish-blue;
+    max-width: 27rem;
+    margin-bottom: 3rem;
+    @media screen and (max-width: 768px) {
+      font-size: 1.2rem;
+      text-align: justify;
+    }
+  }
+
+  &__rate {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+
+    & > span:nth-of-type(1) {
+      color: $Dark-cyan;
+      font: 700 3.2rem/1 $frauncess;
+      margin-right: 3rem;
+      @media screen and (max-width: 768px) {
+        font-size: 2.4rem;
+      }
+    }
+
+    & > span:nth-of-type(2) {
+      color: $Dark-grayish-blue;
+      font: 500 1.6rem/1 $montserrat;
+      text-decoration: line-through;
+      @media screen and (max-width: 768px) {
+        font-size: 1.2rem;
+      }
+    }
+  }
+
+  &__aoc {
+    font: 500 1.6rem/1 $montserrat;
+    color: $White;
+    text-decoration: none;
+    background-color: $Dark-cyan;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.7rem 0 1.5rem 0;
+    border-radius: 1rem;
+    margin-top: auto;
+    @media screen and (max-width: 768px) {
+      font-size: 1.2rem;
+      padding: 1.2rem 0 1rem 0;
+    }
+
+    & > img {
+      display: block;
+      margin-right: 1.5rem;
+      padding-bottom: 0.4rem;
+    }
+  }
+}
