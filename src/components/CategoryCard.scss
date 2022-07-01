@@ -1,0 +1,140 @@
+.cCard {
+  position: relative;
+  max-width: 16rem;
+  width: 100%;
+  z-index: 10;
+  @media screen and (max-width: 768px) {
+    max-width: unset;
+    width: 100%;
+  }
+
+  &:not(:nth-of-type(3n + 3)) {
+    margin-right: 2rem;
+    @media screen and (max-width: 768px) {
+      margin-right: 0;
+    }
+  }
+
+  &:nth-of-type(n + 4) {
+    margin-top: 2rem;
+    @media screen and (max-width: 768px) {
+      margin-top: 0;
+    }
+  }
+
+  &:nth-of-type(n + 2) {
+    @media screen and (max-width: 768px) {
+      margin-top: 2rem;
+    }
+  }
+
+  &__color {
+    display: flex;
+    justify-content: flex-end;
+    background-color: $Light-orange;
+    padding-right: 1rem;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: -1;
+    border-top-right-radius: 1rem;
+    border-top-left-radius: 1rem;
+    min-height: 4rem;
+
+    &--work {
+      background-color: $Light-orange;
+    }
+
+    &--play {
+      background-color: $Soft-blue;
+    }
+
+    &--study {
+      background-color: $Light-red;
+    }
+
+    &--exercise {
+      background-color: $Lime-green;
+    }
+
+    &--social {
+      background-color: $Violet;
+    }
+
+    &--self-care {
+      background-color: $Soft-orange;
+    }
+
+    & > img {
+      display: block;
+      width: 4rem;
+      transform: translateY(-0.5rem);
+    }
+  }
+
+  &__content {
+    background-color: $Dark-blue;
+    padding: 2rem;
+    margin-top: 2.5rem;
+    border-radius: 1rem;
+    z-index: 2;
+    cursor: pointer;
+    transition: all 0.25s ease;
+
+    &:hover {
+      background-color: $Desaturated-blue;
+      transition: all 0.25s ease;
+    }
+  }
+
+  &__content-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+
+    & > span {
+      font-size: 1.4rem;
+      font-weight: 500;
+      color: $White;
+    }
+
+    & > svg {
+      width: 2.5rem;
+      height: 0.5rem;
+      fill: $Pale-Blue;
+      cursor: pointer;
+      transition: all 0.25s ease;
+
+      &:hover {
+        fill: $White;
+        transition: all 0.25s ease;
+      }
+    }
+  }
+
+  &__content-time {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    @media screen and (max-width: 768px) {
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+
+  &__content-current {
+    color: $White;
+    font-size: 3.2rem;
+    font-weight: 300;
+    margin-bottom: 0.5rem;
+  }
+
+  &__content-previous {
+    color: $Pale-Blue;
+    font-size: 1.2rem;
+    font-weight: 300;
+  }
+}
