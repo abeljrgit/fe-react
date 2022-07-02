@@ -1,4 +1,41 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap");
+
+$space-mono: "Space Mono", monospace;
+
+$Strong-cyan: hsl(172, 67%, 45%);
+$Strong-cyan-2: hsla(172, 67%, 45%, 0.358);
+$Very-dark-cyan: hsl(183, 100%, 15%);
+$Dark-grayish-cyan: hsl(186, 14%, 43%);
+$Grayish-cyan: hsl(184, 14%, 56%);
+$Light-grayish-cyan: hsl(185, 41%, 84%);
+$Very-light-grayish-cyan: hsl(189, 41%, 97%);
+$White: hsl(0, 0%, 100%);
+$Orange: orange;
+
+@import "./Calculator/TipCalculatorLeft.scss";
+@import "./Calculator/TipCalculatorRight.scss";
+@import "./Calculator/TipCalculator.scss";
+
 body {
   width: 100%;
   height: 100%;
+  font-family: $space-mono;
+  background-color: $Light-grayish-cyan;
+}
+
+.App {
+  &__container {
+    max-width: 120rem;
+    margin: 0 auto;
+  }
+
+  &__wrapper {
+    padding: 10rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @media screen and (max-width: 768px) {
+      padding: 5rem 1rem;
+    }
+  }
 }

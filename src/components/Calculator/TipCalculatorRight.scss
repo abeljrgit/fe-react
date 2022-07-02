@@ -1,0 +1,79 @@
+.tc {
+  &__right {
+    min-width: 27.5rem;
+    background-color: $Very-dark-cyan;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    border-radius: 1rem;
+    @media screen and (max-width: 768px) {
+      min-width: unset;
+      max-width: 100%;
+    }
+  }
+
+  &__amount {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+  }
+
+  &__amount-text {
+    font-size: 1.2rem;
+    color: $White;
+    display: flex;
+    flex-direction: column;
+
+    & > span {
+      color: $Dark-grayish-cyan;
+    }
+  }
+
+  &__amount-number {
+    font-size: 3.2rem;
+    color: $Strong-cyan;
+  }
+
+  &__total {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 8rem;
+    @media screen and (max-width: 768px) {
+      margin-bottom: 2rem;
+    }
+  }
+
+  &__total-text {
+    font-size: 1.2rem;
+    color: $White;
+    display: flex;
+    flex-direction: column;
+
+    & > span {
+      color: $Dark-grayish-cyan;
+    }
+  }
+
+  &__total-number {
+    font-size: 3.2rem;
+    color: $Strong-cyan;
+  }
+
+  &__reset {
+    font-size: 1.6rem;
+    color: $Very-dark-cyan;
+    text-align: center;
+    background-color: $Strong-cyan-2;
+    padding: 0.6rem 0;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: all 0.25s ease;
+
+    &--active {
+      background-color: $Strong-cyan;
+      transition: all 0.25s ease;
+    }
+  }
+}

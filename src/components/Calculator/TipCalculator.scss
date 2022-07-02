@@ -1,0 +1,9 @@
+.tc {
+  display: flex;
+  background-color: $White;
+  padding: 2rem;
+  border-radius: 1.5rem;
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+  }
+}

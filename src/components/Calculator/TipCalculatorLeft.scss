@@ -1,0 +1,219 @@
+.tc {
+  &__left {
+    min-width: 27.5rem;
+    max-width: 27.5rem;
+    margin-right: 2rem;
+    display: flex;
+    flex-direction: column;
+    @media screen and (max-width: 768px) {
+      margin-right: 0;
+      margin-bottom: 2rem;
+      min-width: unset;
+      max-width: 100%;
+    }
+  }
+
+  &__bill {
+    margin-bottom: 2rem;
+  }
+
+  &__people {
+    margin-top: auto;
+    @media screen and (max-width: 768px) {
+      margin-top: 2rem;
+    }
+  }
+
+  &__bill-label,
+  &__people-label {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+  }
+
+  &__bill-label {
+    color: $Dark-grayish-cyan;
+  }
+
+  &__people-label {
+    display: flex;
+    justify-content: space-between;
+
+    & > span:nth-of-type(1) {
+      color: $Dark-grayish-cyan;
+    }
+
+    & > span:nth-of-type(2) {
+      visibility: hidden;
+      color: $Orange;
+      transform: all 0.25s ease;
+    }
+
+    &--error {
+      & > span:nth-of-type(2) {
+        visibility: visible;
+        transform: all 0.25s ease;
+      }
+    }
+  }
+
+  &__bill-input,
+  &__people-input {
+    position: relative;
+
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 1rem;
+      transform: translate(0, -50%);
+      width: 1.2rem;
+      height: 1.2rem;
+    }
+
+    & > input {
+      width: 100%;
+      font-family: inherit;
+      font-size: 1.6rem;
+      color: $Very-dark-cyan;
+      text-align: right;
+      background-color: $Very-light-grayish-cyan;
+      border: 0.1rem solid $Very-light-grayish-cyan;
+      border-radius: 0.5rem;
+      padding: 0.5rem 1rem;
+
+      &:focus {
+        outline: 0.1rem solid $Strong-cyan;
+      }
+
+      &::placeholder {
+        color: $Grayish-cyan;
+      }
+    }
+
+    & > input::-webkit-outer-spin-button,
+    & > input::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+
+    /* Firefox */
+    & > input[type="number"] {
+      -moz-appearance: textfield;
+    }
+
+    &--error {
+      & > input {
+        border: 0.1rem solid $Orange;
+      }
+    }
+  }
+
+  &__bill-input::before {
+    background: url("../img/icon-dollar.svg") no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
+
+  &__people-input::before {
+    background: url("../img/icon-person.svg") no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
+
+  &__tip {
+  }
+
+  &__tip-label {
+    font-size: 1.2rem;
+    color: $Dark-grayish-cyan;
+    margin-bottom: 0.5rem;
+  }
+
+  &__tip-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__tip-box {
+    width: 30%;
+    @media screen and (max-width: 768px) {
+      width: 48%;
+    }
+
+    &:not(:nth-of-type(3n + 3)) {
+      margin-right: auto;
+      @media screen and (max-width: 768px) {
+        margin-right: 0;
+      }
+    }
+
+    &:nth-of-type(n + 4) {
+      margin-top: 1rem;
+      @media screen and (max-width: 768px) {
+        margin-top: 0;
+      }
+    }
+
+    @media screen and (max-width: 768px) {
+      &:not(:nth-of-type(2n + 2)) {
+        margin-right: auto;
+      }
+      &:nth-of-type(n + 3) {
+        margin-top: 1rem;
+      }
+    }
+  }
+
+  &__tip-btn {
+    font-size: 1.8rem;
+    color: $White;
+    text-align: center;
+    padding: 0.6rem 0;
+    background-color: $Very-dark-cyan;
+    border-radius: 0.5rem;
+    transition: all 0.25s ease;
+
+    &--active {
+      color: $Very-dark-cyan;
+      background-color: rgba($Strong-cyan, 0.4);
+      transition: all 0.25s ease;
+    }
+  }
+
+  &__tip-input {
+    display: block;
+
+    & > input {
+      width: 100%;
+      height: 100%;
+      font-family: inherit;
+      font-size: 1.8rem;
+      text-align: right;
+      padding: 0 0.5rem;
+      background-color: $Very-light-grayish-cyan;
+      border: 0.1rem solid $Very-light-grayish-cyan;
+      border-radius: 0.5rem;
+
+      &:focus {
+        outline: 0.1rem solid $Strong-cyan;
+      }
+
+      &::placeholder {
+        text-align: center;
+        color: $Dark-grayish-cyan;
+      }
+    }
+
+    & > input::-webkit-outer-spin-button,
+    & > input::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+
+    /* Firefox */
+    & > input[type="number"] {
+      -moz-appearance: textfield;
+    }
+  }
+}
