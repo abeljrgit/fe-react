@@ -6,6 +6,11 @@ function App() {
     <section className="App">
       <div className="App__container">
         <div className="App__wrapper">
+          <h1 className="App__title">
+            SPLI
+            <br />
+            TTER
+          </h1>
           <TipCalculator />
         </div>
       </div>
