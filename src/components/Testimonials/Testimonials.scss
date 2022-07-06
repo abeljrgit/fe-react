@@ -1,0 +1,27 @@
+.testimonials {
+  &__wrapper {
+    max-width: 140rem;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 12rem 0;
+    @media screen and (max-width: 768px) {
+      padding: 6rem 1rem;
+    }
+  }
+
+  &__title {
+    font: 900 1.6rem/1.2 $fraunces;
+    color: $Dark-grayish-blue;
+    letter-spacing: 0.1em;
+    margin-bottom: 5rem;
+  }
+
+  &__cards {
+    display: flex;
+    @media screen and (max-width: 768px) {
+      flex-direction: column;
+    }
+  }
+}

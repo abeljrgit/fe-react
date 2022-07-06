@@ -1,3 +1,35 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:opsz,wght@9..144,700;9..144,900&display=swap");
+
+$barlow: "Barlow", sans-serif;
+$fraunces: "Fraunces", serif;
+
+$Soft-red: hsl(7, 99%, 70%);
+$Yellow: hsl(51, 100%, 49%);
+$Dark-desaturated-cyan: hsl(167, 40%, 24%);
+$Dark-blue: hsl(198, 62%, 26%);
+$Dark-moderate-cyan: hsl(168, 34%, 41%);
+$Very-dark-desaturated-blue: hsl(212, 27%, 19%);
+$Very-dark-grayish-blue: hsl(213, 9%, 39%);
+$Dark-grayish-blue: hsl(232, 10%, 55%);
+$Grayish-blue: hsl(210, 4%, 67%);
+$White: hsl(0, 0%, 100%);
+
+// Footer
+@import "./Footer/Footer.scss";
+// Gallery
+@import "./Gallery/Gallery.scss";
+// Testimonials
+@import "./Testimonials/Testimonial.scss";
+@import "./Testimonials/Testimonials.scss";
+// Portfolio
+@import "./Portfolio/Portfolio.scss";
+@import "./Portfolio/Portfolio2.scss";
+// Header
+@import "./Header/Burger.scss";
+@import "./Header/Header.scss";
+// Hero
+@import "./Hero/Hero.scss";
+
 body {
   width: 100%;
   height: 100%;

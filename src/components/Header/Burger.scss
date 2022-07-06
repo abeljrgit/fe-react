@@ -1,0 +1,37 @@
+.burger {
+  display: none;
+  @media screen and (max-width: 768px) {
+    display: block;
+  }
+
+  &__wrapper {
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+  }
+
+  &__line {
+    height: 0.1rem;
+    width: 3rem;
+    background-color: $White;
+    transition: all 0.5s ease;
+  }
+
+  &--active {
+    & .burger__line:nth-of-type(1) {
+      transform: translateY(0.95rem) rotate(-45deg);
+      transition: all 0.25s ease;
+    }
+    & .burger__line:nth-of-type(2) {
+      transform: translateY(3rem);
+      opacity: 0;
+      transition: all 0.25s ease;
+    }
+    & .burger__line:nth-of-type(3) {
+      transform: translateY(-0.95rem) rotate(45deg);
+      transition: all 0.25s ease;
+    }
+  }
+}

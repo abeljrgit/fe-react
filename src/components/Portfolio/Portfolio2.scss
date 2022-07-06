@@ -1,0 +1,80 @@
+.portfolio2 {
+  display: flex;
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+  }
+
+  &__left {
+    flex-basis: 50%;
+    position: relative;
+  }
+
+  &__right {
+    flex-basis: 50%;
+    position: relative;
+  }
+
+  &__left-text,
+  &__right-text {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    max-width: 35rem;
+    width: 100%;
+    @media screen and (max-width: 768px) {
+      top: 65%;
+      padding: 0 1rem;
+    }
+  }
+
+  &__left-image,
+  &__right-image {
+    overflow: hidden;
+
+    & > img {
+      width: 100%;
+      object-fit: cover;
+    }
+
+    & > img:first-of-type {
+      display: block;
+      @media screen and (max-width: 768px) {
+        display: none;
+      }
+    }
+
+    & > img:last-of-type {
+      display: none;
+      @media screen and (max-width: 768px) {
+        display: block;
+      }
+    }
+  }
+
+  &__left-title,
+  &__right-title {
+    font: 900 2.4rem/1.2 $fraunces;
+    text-align: center;
+    margin-bottom: 2.5rem;
+  }
+
+  &__left-paragraph,
+  &__right-paragraph {
+    font: 600 1.6rem/1.65 $barlow;
+    text-align: center;
+    @media screen and (max-width: 768px) {
+      line-height: 1.4;
+    }
+  }
+
+  &__left-title,
+  &__left-paragraph {
+    color: $Dark-desaturated-cyan;
+  }
+
+  &__right-title,
+  &__right-paragraph {
+    color: $Dark-blue;
+  }
+}

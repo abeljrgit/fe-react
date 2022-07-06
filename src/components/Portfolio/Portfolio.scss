@@ -1,0 +1,110 @@
+.portfolio {
+  display: flex;
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+  }
+
+  &--row-reverse {
+    flex-direction: row-reverse;
+    @media screen and (max-width: 768px) {
+      flex-direction: column;
+    }
+  }
+
+  &__text {
+    flex-basis: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    @media screen and (max-width: 768px) {
+      padding: 10rem 0;
+    }
+  }
+
+  &__text-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    @media screen and (max-width: 768px) {
+      align-items: center;
+    }
+  }
+
+  &__title {
+    font: 900 3rem/1.2 $fraunces;
+    color: $Very-dark-desaturated-blue;
+    margin-bottom: 2rem;
+    max-width: 30rem;
+    @media screen and (max-width: 1000px) {
+      font-size: 2.4rem;
+      max-width: 20rem;
+    }
+    @media screen and (max-width: 768px) {
+      text-align: center;
+    }
+  }
+
+  &__paragraph {
+    font: 600 1.6rem/1.65 $barlow;
+    color: $Dark-grayish-blue;
+    max-width: 40rem;
+    margin-bottom: 3rem;
+    @media screen and (max-width: 1000px) {
+      font-size: 1.2rem;
+      max-width: 30rem;
+    }
+    @media screen and (max-width: 768px) {
+      text-align: center;
+    }
+  }
+
+  &__button {
+    font: 900 1.6rem/1.2 $fraunces;
+    color: $Very-dark-desaturated-blue;
+    text-decoration: none;
+    position: relative;
+    @media screen and (max-width: 1000px) {
+      font-size: 1.2rem;
+      text-align: center;
+    }
+
+    &::after {
+      content: "";
+      display: block;
+      width: 110%;
+      height: 1rem;
+      background-color: $Yellow;
+      border-radius: 1rem;
+      opacity: 0.3;
+      position: absolute;
+      bottom: -10%;
+      left: 50%;
+      transform: translate(-50%, 0);
+      z-index: -1;
+      transition: all 0.25s ease;
+    }
+
+    &:hover {
+      &::after {
+        opacity: 1;
+        transition: all 0.25s ease;
+      }
+    }
+
+    &--pink::after {
+      background-color: $Soft-red;
+    }
+  }
+
+  &__thumbnail {
+    flex-basis: 50%;
+    overflow: hidden;
+
+    & > img {
+      display: block;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+}

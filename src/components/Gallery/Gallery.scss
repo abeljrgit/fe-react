@@ -1,0 +1,33 @@
+.gallery {
+  display: flex;
+  @media screen and (max-width: 768px) {
+    flex-wrap: wrap;
+  }
+
+  &__image {
+    flex-basis: 25%;
+    overflow: hidden;
+    @media screen and (max-width: 768px) {
+      flex-basis: 50%;
+    }
+
+    & > img {
+      max-width: 100%;
+      object-fit: cover;
+    }
+
+    & > img:first-of-type {
+      display: block;
+      @media screen and (max-width: 768px) {
+        display: none;
+      }
+    }
+
+    & > img:last-of-type {
+      display: none;
+      @media screen and (max-width: 768px) {
+        display: block;
+      }
+    }
+  }
+}
