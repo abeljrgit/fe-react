@@ -1,5 +1,5 @@
 import logoGreen from "../../img/logo-green.svg";
-import FacebookLogo from "../Svg/facebookLogo";
+import FacebookLogo from "../Svg/FacebookLogo";
 import InstagramLogo from "../Svg/InstagramLogo";
 import PinterestLogo from "../Svg/PinterestLogo";
 import TwitterLogo from "../Svg/TwitterLogo";
